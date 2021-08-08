@@ -1,5 +1,25 @@
-import React, { useState } from "react";
+import React from "react";
+import "../style/question.css";
 
-import Comment from "./Comment.jsx";
+const Question = ({ user, description, comments }) => {
+  const addComment = () => {};
 
-const Question = () => {};
+  return (
+    <div className="questionBox">
+      <div className="user">
+        <p>{user}</p>
+      </div>
+      <div className="question">
+        <p>{description}</p>
+      </div>
+      <div className="comments">
+        <div className="comment">{comments}</div>
+        <button onClick={addComment} className="commentButton">
+          Add Comment
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default Question;
